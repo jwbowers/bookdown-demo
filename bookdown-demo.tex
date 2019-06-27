@@ -124,7 +124,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-06-26}
+    \date{2019-06-27}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -135,6 +135,20 @@
 }
 \makeatother
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -145,7 +159,9 @@
 \hypertarget{prerequisites}{%
 \chapter{Prerequisites}\label{prerequisites}}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
+This is a \emph{sample} book written in \textbf{Markdown}. You can use
+anything that Pandoc's Markdown supports, e.g., a math equation
+\(a^2 + b^2 = c^2\).
 
 The \textbf{bookdown} package can be installed from CRAN or Github:
 
@@ -157,16 +173,23 @@ The \textbf{bookdown} package can be installed from CRAN or Github:
 \end{Highlighting}
 \end{Shaded}
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+Remember each Rmd file contains one and only one chapter, and a chapter
+is defined by the first-level heading \texttt{\#}.
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.name/tinytex/}.
+To compile this example to PDF, you need XeLaTeX. You are recommended to
+install TinyTeX (which includes XeLaTeX):
+\url{https://yihui.name/tinytex/}.
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+You can label chapter and section titles using \texttt{\{\#label\}}
+after them, e.g., we can reference Chapter \ref{intro}. If you do not
+manually label them, there will be automatic labels anyway, e.g.,
+Chapter \ref{methods}.
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+Figures and tables with captions will be placed in \texttt{figure} and
+\texttt{table} environments, respectively.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -184,7 +207,10 @@ Figures and tables with captions will be placed in \texttt{figure} and \texttt{t
 \caption{Here is a nice figure!}\label{fig:nice-fig}
 \end{figure}
 
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
+Reference a figure by its code chunk label with the \texttt{fig:}
+prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can
+reference tables generated from \texttt{knitr::kable()}, e.g., see Table
+\ref{tab:nice-tab}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -230,7 +256,9 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 \end{tabular}
 \end{table}
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+You can write citations, too. For example, we are using the
+\textbf{bookdown} package \citep{R-bookdown} in this sample book, which
+was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
 \hypertarget{literature}{%
 \chapter{Literature}\label{literature}}
